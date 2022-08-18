@@ -1,0 +1,140 @@
+@import "../../../assets/scss/global.scss";
+
+.button {
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+
+  &.cart {
+    position: relative;
+    background-color: $orange;
+    max-width: 150px;
+    height: 50px;
+    color: $white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &::before {
+      content: "";
+      position: absolute;
+      background: rgba(255, 255, 255, 0.25);
+      width: 2px;
+      height: 50%;
+      left: 50%;
+      top: 25%;
+    }
+    span:last-child {
+      display: flex;
+      gap: 8px;
+      width: 34px;
+      height: 17px;
+    }
+  }
+
+  &.sort {
+    height: 46px;
+    padding: 0px 24px;
+    &--active {
+      background-color: $black75;
+      color: $white;
+    }
+  }
+  &.dropdown {
+    position: relative;
+    width: max-content;
+    height: 17px;
+    padding-left: 17px;
+    border: none;
+    width: 235px;
+    background-color: inherit;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    letter-spacing: 0.015em;
+
+    &--active {
+      .button.dropdown__menu {
+        display: block;
+      }
+      & > img {
+        transform: rotate(180deg);
+      }
+    }
+    & > span {
+      width: max-content;
+    }
+    & > img {
+      position: absolute;
+      top: 7px;
+      left: 0;
+    }
+    &__title {
+      font-family: "Nunito-Regular";
+      color: $orange;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      padding-left: 8px;
+    }
+    &__menu {
+      font-family: "Nunito-Regular";
+      position: absolute;
+      top: 24px;
+      right: 0px;
+      display: none;
+      width: 132px;
+      height: max-content;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+      border-radius: 10px;
+      & > li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 38px;
+        border-radius: 0px;
+      }
+    }
+    &__item--active {
+      background: rgba(254, 95, 30, 0.05);
+      color: $orange;
+      font-family: "Nunito-Bold";
+    }
+  }
+  &.add {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 16px;
+    max-width: 155px;
+    height: 40px;
+    background-color: $orange;
+    color: $white;
+
+    & > img {
+      filter: grayscale(1) brightness(1000%);
+    }
+    &--active {
+      background-color: inherit;
+      color: $orange;
+      border: 1px solid $orange;
+      & > img {
+        filter: none;
+      }
+    }
+    & > div {
+      position: absolute;
+      right: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 13px;
+      width: 22px;
+      height: 22px;
+      color: $white;
+      border-radius: 50%;
+      background-color: $orange;
+    }
+  }
+}

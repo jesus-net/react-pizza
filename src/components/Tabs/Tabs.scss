@@ -1,0 +1,15 @@
+@import '../../assets/scss/global.scss';
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 19px;
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
