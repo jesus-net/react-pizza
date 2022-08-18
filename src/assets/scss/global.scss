@@ -1,0 +1,80 @@
+@import "./fonts.scss";
+
+$background: #ffdf8c;
+
+$black100: #000000;
+$black75: #282828;
+$orange: #fe5f1e;
+$white: #ffffff;
+$gray100: #8d8d8d;
+$gray75: #d7d7d7;
+$gray50: #F3F3F3;;
+$gray25: #f9f9f9;
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0;
+}
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  min-width: 320px;
+  max-width: 1920px;
+  padding: 45px;
+  margin: 0 auto;
+}
+.container {
+  background-color: $white;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 96px;
+}
+.title {
+  font-family: "Nunito-Bold";
+  font-size: 32px;
+  line-height: 39px;
+}
+
+body {
+  font-family: "Nunito-Bold";
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+  color: $black100;
+  background-color: $background;
+  &::-webkit-scrollbar-thumb {
+    background: $orange;
+    border-radius: 16px;
+  }
+
+  &::-webkit-scrollbar {
+    background: inherit;
+    width: 6px;
+  }
+}
+
+.sub-title {
+  font-family: "Nunito-ExtraBold";
+  font-size: 20px;
+  line-height: 24px;
+}
+[class*="__container"] {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0px 67px;
+}
+.text {
+  font-family: "Nunito-Regular";
+  font-size: 18px;
+  line-height: 22px;
+  color: $gray100;
+  margin: 0;
+}
